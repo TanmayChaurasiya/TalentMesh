@@ -1,0 +1,219 @@
+
+.container {
+  font-family: "Poppins";
+  padding: 1.2rem;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding-inline: 2rem;
+  height: 80vh;
+}
+
+.mainContaner_left {
+  flex: 0.5;
+}
+
+.mainContainer_right {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContainer_right img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.mainContaner_left > p:nth-child(1) {
+  font-size: 2.9rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+
+  background: linear-gradient(
+    90deg,
+    #667eea,
+    #764ba2,
+    #ff6b6b,
+    #feca57,
+    #737375
+  );
+
+  background-size: 300% 300%;
+  animation: gradientFloat 6s ease infinite;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mainContaner_left > p:nth-child(2) {
+  font-size: 1.7rem;
+  color: #4d4d4d;
+}
+
+.mainContaner_left > div.buttonJoin {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s;
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  background-color: rgb(221, 46, 212);
+  color: white;
+  padding-inline: 1.2rem;
+  padding-block: 0.6rem;
+  border-radius: 20px;
+}
+
+@keyframes gradientFloat {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mainContainer {
+    gap: 2rem;
+    padding-inline: 2rem;
+  }
+
+  .mainContaner_left {
+    flex: 0.6;
+  }
+
+  .mainContainer_right {
+    flex: 0.4;
+  }
+
+  .mainContainer_right img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .mainContaner_left > p:nth-child(1) {
+    font-size: 2.5rem;
+  }
+
+  .mainContaner_left > p:nth-child(2) {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .mainContainer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    height: auto;
+    min-height: 80vh;
+    padding-inline: 1rem;
+    text-align: center;
+  }
+
+  .mainContaner_left {
+    width: 100%;
+    flex: none;
+  }
+
+  .mainContainer_right {
+    width: 100%;
+    flex: none;
+  }
+
+  .mainContaner_left > p:nth-child(1) {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .mainContaner_left > p:nth-child(2) {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  .mainContaner_left > div.buttonJoin {
+    margin: 1rem auto 0;
+    font-size: 1.2rem;
+    padding-inline: 1.2rem;
+    padding-block: 0.6rem;
+  }
+
+  .mainContainer_right img {
+    width: 80%;
+    max-width: 350px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0.7rem;
+  }
+
+  .mainContainer {
+    min-height: 85vh;
+    padding-inline: 0.5rem;
+    gap: 1.5rem;
+  }
+
+  .mainContaner_left > p:nth-child(1) {
+    font-size: 1.8rem;
+  }
+
+  .mainContaner_left > p:nth-child(2) {
+    font-size: 1.1rem;
+  }
+
+  .mainContaner_left > div.buttonJoin {
+    font-size: 1rem;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+  }
+
+  .mainContainer_right img {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .mainContainer {
+    padding-inline: 0.3rem;
+    gap: 1.2rem;
+  }
+
+  .mainContaner_left > p:nth-child(1) {
+    font-size: 1.5rem;
+  }
+
+  .mainContaner_left > p:nth-child(2) {
+    font-size: 0.9rem;
+  }
+
+  .mainContaner_left > div.buttonJoin {
+    font-size: 0.9rem;
+    padding-inline: 0.9rem;
+    padding-block: 0.45rem;
+  }
+
+  .mainContainer_right img {
+    width: 95%;
+    max-width: 280px;
+  }
+}

@@ -1,0 +1,336 @@
+.container{
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+
+}
+.backDropContainer{
+    width: 100%;
+    height: 25vh;
+    border-radius: 2rem;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuimJbSL9LRJrwD-d7tYloO0UB2NmRM1nUPSSSkJ51Mw&s=10");
+    background-repeat: no-repeat;   
+    background-size: cover;
+    position: relative;
+
+     
+}
+.backDrop{
+    height: 8em;
+    width: 8em;
+    border-radius: 50%;
+   bottom: -30%;
+    left: 6%;
+    object-fit: cover;
+    position: absolute;
+}
+.profileContainer_details{
+    padding-top: 4rem;
+    
+}
+.card{
+    display: flex;
+    align-items: center;
+    gap:1.4rem;
+}
+.card_profileContainer{
+    display: flex;
+}
+
+.card_profileContainer>img{
+    width: 3.4rem;
+    height: auto;
+    height: 3.4rem;
+    object-fit: cover;
+}
+
+.connectBtn{
+    padding-inline: 0.8rem;
+    padding-block: 0.3rem;
+    background: rgba(3,93,183,0.905);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.connectionButton{
+    padding-inline: 0.8rem;
+    padding-block: 0.3rem;
+    border: 1px solid black;
+    outline: none;
+    color:rgba(3,93,183,0.905);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.workHistoryContainer{
+    display: flex;
+    gap: 1.4rem;
+    padding-top: 1.4rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.workHistoryCard{
+    min-width: fit-content;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgb(173,173,173);
+}
+
+.backDrop_overlay{
+     height: 8em;
+    width: 8em;
+    border-radius: 50%;
+   bottom: -30%;
+    left: 6%;
+    object-fit: cover;
+    position: absolute; 
+    z-index: 4;   
+    transition: all 0.4s;
+    cursor: pointer;
+    opacity: 0.0;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backDrop_overlay:hover{
+    opacity: 0.8;
+    background: black;
+}
+/* .profileContainer_details{
+   
+} */
+.nameEdit{
+     outline: none;
+    border-style: none;
+    padding-inline: 10px;
+    padding-block: 9px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.updateProfileBtn{
+    padding-inline: 0.8rem;
+    padding-block: 0.3rem;
+    background: rgba(3,93,183,0.905);
+    outline: none;
+    border: none;
+    color: aliceblue;
+    border-radius: 10px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.profileContainer_details textarea{
+    outline: none;
+    border: none;
+    padding-inline: 10px;
+    padding-block: 9px;
+    font-family:"Poppins" !important;
+    font-size: 1.1rem;
+
+}
+
+.addWorkButton{
+    
+    padding-inline: 1.3rem;
+    background: white;
+    padding-block: 1.2rem;  
+    border-radius: 10px;
+    cursor: pointer ;
+    border: 1px dotted silver;
+}
+
+.commentsContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.allCommentsContainer{
+  width: 40vw;
+  height: fit-content;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+  padding: 1.4rem;  
+   display: flex;
+  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    gap:1.2rem;
+}
+
+.inputField{
+    padding-inline: 1.3rem;
+    padding-block: 0.8rem;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid silver;
+    width: 100%;
+
+}
+
+
+
+
+.singleCard {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  border-bottom: 1px solid rgb(179, 179, 179);
+}
+
+.singleCard_profileContainer {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 1.2rem;
+  padding: 1.2rem;
+}
+
+.singleCard_profileContainer > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.card_body {
+  margin-inline: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.singleCard_image > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  
+}
+
+.optionContainer {
+  display: flex;
+  height: 40%;
+  width: 80%;
+  margin-inline: 4em;
+  justify-content: space-between;
+  margin-block: 0.8em;
+}
+
+.singleOption_container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.commentsContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.allCommentsContainer{
+  width: 40vw;
+  height: 80vh;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+  padding: 1.4rem;  
+   display: flex;
+  flex-direction: column;
+
+}
+
+.postCommentContainer{
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.postCommentContainer>input{
+  flex: 0.9rem;
+  padding-inline: 1.5rem;
+  padding-block: 1.2rem;
+  border: none;
+  background-color: rgb(228,228,228);
+  border-radius: 10px;
+  outline: none;
+}
+
+.postCommentContainer>input:focus{
+  border: 1px solid silver;
+}
+
+.mainContainer{
+    margin-block: 3rem;
+    padding-block: 3rem;
+    border-top: 1px solid black;
+}
+.postContainer{
+    min-width: fit-content;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgb(173,173,173);
+    margin-block: 3rem;
+    
+}
+
+.postCommentContainer_commentBtn{
+  flex:0.1;
+  width: fit-content;
+  padding: 1.1rem;
+  background: orange;
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center;
+  color: #ffffff;
+  
+  font-weight: bold;
+
+}
+.singleComment_profilePicture{
+   display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* justify-content: center; */
+  cursor: pointer; 
+}
+.commentBody{
+  margin-block-start: 0.3rem;
+  margin-block-end: 1.8rem;
+  margin-inline: 1rem;
+}
+
+.commentsList{
+  
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 90px; 
+  padding-right: 10px;
+} 

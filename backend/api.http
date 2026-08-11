@@ -1,0 +1,100 @@
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username":"Tanmay",
+  "name":"Tanmay",
+  "email": "Tanmay@gmail.com",
+  "password": "Tanmay"
+}
+
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "ankit@gmail.com",
+  "password": "12456"
+}
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "Tanmay@gmail.com",
+  "password": "Tanmay"
+}
+###
+POST http://localhost:3000/update_profile_picture
+Content-Type: application/json
+
+{
+  "token": "b0c76bdf66b6dae45c77041e2b9ca1ce02946472921c5aa1a9496b6d0b5f0008",
+  "password": "Tanmay"
+}
+
+###
+GET http://localhost:3000/get_user_and_profile
+Content-Type: application/json
+
+{
+  "token": "791ac766e50a06eb3a64ed601619cb2c65cff2b1d8d9b0764bcc033bddafc0df"
+}
+
+###
+POST http://localhost:3000/update_profile_date
+Content-Type: application/json
+
+{
+  "token": "791ac766e50a06eb3a64ed601619cb2c65cff2b1d8d9b0764bcc033bddafc0df",
+  "bio": "Passionate software engineer",
+  "currentPost": "CTO",
+  "pastWork": [
+    {
+      "company": "Microsoft",
+      "position": "CTO",
+      "years": "2+"
+    }
+  ],
+  "education": [
+    {
+      "school": "Biet",
+      "degree": "B.Tech",
+      "fieldOfStudy": "2024-2028"
+    }
+  ]
+}
+
+###
+GET http://localhost:3000/posts 
+###
+POST http://localhost:3000/get_all_comments
+Content-Type: application/json
+
+{
+  "post_id": "6a4f02199a13c069bf355303"
+}
+
+###
+POST http://localhost:3000/get_all_comments 
+Content-Type: application/json
+
+{
+  "post_id": "6a4f02199a13c069bf355303" 
+}
+
+###
+POST http://localhost:3000/deleteComments 
+Content-Type: application/json
+
+{
+  "token":"ea4e3e5babae9438ff4c41bca8950d49c9c54d5ad932793aefa7db89bdf1f975",
+  "comment_id": "6a4f1be826936924904fde6d" 
+
+}
+
+
+

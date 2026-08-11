@@ -1,0 +1,602 @@
+.createPostContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 120px;
+  width: 100%;
+  background-color: rgb(255, 246, 246);
+  border-radius: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  /* margin-left: auto;
+  margin-right: 20px; */
+}
+
+.uploadButton {
+  background-color: #4f46e5; /* Indigo accent color */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: absolute;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+  right: 0;
+  bottom: -30px;
+}
+
+.createPostContainer > textarea {
+  flex: 1;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 60%;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.userProfile {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.Fab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.Fab > svg {
+  width: 32px;
+  height: 32px;
+  color: #555;
+  flex-shrink: 0;
+}
+
+/* styling for the userdata layout */
+
+.singleCard {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  border-bottom: 1px solid rgb(179, 179, 179);
+}
+
+.singleCard_profileContainer {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 1.2rem;
+  padding: 1.2rem;
+}
+
+.singleCard_profileContainer > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.card_body {
+  margin-inline: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.singleCard_image > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.optionContainer {
+  display: flex;
+  height: 40%;
+  width: 80%;
+  margin-inline: 4em;
+  justify-content: space-between;
+  margin-block: 0.8em;
+  
+}
+
+.singleOption_container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.commentsContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.allCommentsContainer{
+  width: 40vw;
+  height: 80vh;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+  padding: 1.4rem;  
+   display: flex;
+  flex-direction: column;
+
+}
+
+.postCommentContainer{
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.postCommentContainer>input{
+  flex: 0.9rem;
+  padding-inline: 1.5rem;
+  padding-block: 1.2rem;
+  border: none;
+  background-color: rgb(228,228,228);
+  border-radius: 10px;
+  outline: none;
+}
+
+.postCommentContainer>input:focus{
+  border: 1px solid silver;
+}
+
+
+.postCommentContainer_commentBtn{
+  flex:0.1;
+  width: fit-content;
+  padding: 1.1rem;
+  background: orange;
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center;
+  color: #ffffff;
+  
+  font-weight: bold;
+
+}
+.singleComment_profilePicture{
+   display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* justify-content: center; */
+  cursor: pointer; 
+}
+.commentBody{
+  margin-block-start: 0.3rem;
+  margin-block-end: 1.8rem;
+  margin-inline: 1rem;
+}
+
+.commentsList{
+  
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 90px; 
+  padding-right: 10px;
+} 
+
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .createPostContainer {
+    height: 110px;
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .userProfile {
+    width: 52px;
+    height: 52px;
+  }
+
+  .createPostContainer > textarea {
+    height: 60%;
+    padding: 0.7rem 1rem;
+    font-size: 14px;
+  }
+
+  .uploadButton {
+    right: 10px;
+    bottom: -25px;
+    padding: 9px 16px;
+    font-size: 13px;
+  }
+
+  .Fab > svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Post */
+
+  .singleCard_profileContainer {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .singleCard_profileContainer > img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card_body {
+    margin-inline: 1rem;
+  }
+
+  .singleCard_image > img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .optionContainer {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  /* Comments modal */
+
+  .allCommentsContainer {
+    width: 90svw;
+    height: 75vh;
+    padding: 1.2rem;
+  }
+
+  .postCommentContainer {
+    width: 92%;
+    left: 4%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* =========================
+     CREATE POST
+     ========================= */
+
+  .createPostContainer {
+    width: 100%;
+    height: 105px;
+    padding: 0 12px;
+    gap: 10px;
+    border-radius: 15px;
+  }
+
+  .userProfile {
+    width: 45px;
+    height: 45px;
+  }
+
+  .createPostContainer > textarea {
+    width: 100%;
+    height: 60%;
+    padding: 0.6rem 0.8rem;
+    font-size: 13px;
+  }
+
+  .Fab > svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .uploadButton {
+    right: 8px;
+    bottom: -25px;
+    padding: 8px 13px;
+    font-size: 12px;
+  }
+
+
+  /* =========================
+     POST CARD
+     ========================= */
+
+  .singleCard {
+    width: 100%;
+  }
+
+  .singleCard_profileContainer {
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+
+  .singleCard_profileContainer > img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card_body {
+    margin-inline: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 14px;
+  }
+
+  .singleCard_image {
+    width: 100%;
+  }
+
+  .singleCard_image > img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+
+
+  /* =========================
+     POST OPTIONS
+     ========================= */
+
+  .optionContainer {
+    width: 100%;
+    margin-inline: 0;
+    margin-block: 0.7rem;
+    height: auto;
+    padding-inline: 0.5rem;
+    box-sizing: border-box;
+  }
+
+  .singleOption_container {
+    gap: 0.3rem;
+  }
+
+  .optionContainer svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  /* =========================
+     COMMENTS MODAL
+     ========================= */
+
+  .commentsContainer {
+    padding: 0.8rem;
+    box-sizing: border-box;
+  }
+
+  .allCommentsContainer {
+    width: 90svw;
+    height: 82vh;
+    padding: 1rem;
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+
+  .commentsList {
+    margin-bottom: 85px;
+    padding-right: 5px;
+  }
+
+
+  /* =========================
+     COMMENT INPUT
+     ========================= */
+
+  .postCommentContainer {
+    position: absolute;
+    bottom: 0.8rem;
+    left: 3%;
+    width: 94%;
+    gap: 0.5rem;
+  }
+
+  .postCommentContainer > input {
+    min-width: 0;
+    width: 100%;
+    padding-inline: 0.9rem;
+    padding-block: 0.9rem;
+    font-size: 14px;
+  }
+
+  .postCommentContainer_commentBtn {
+    flex: 0 0 auto;
+    padding: 0.9rem;
+    font-size: 13px;
+  }
+
+
+  /* =========================
+     COMMENTS
+     ========================= */
+
+  .singleComment_profilePicture {
+    gap: 0.4rem;
+    font-size: 14px;
+  }
+
+  .commentBody {
+    margin-inline: 0.7rem;
+    margin-block-end: 1.2rem;
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  /* =========================
+     CREATE POST
+     ========================= */
+
+  .createPostContainer {
+    height: 100px;
+    padding: 0 8px;
+    gap: 7px;
+    border-radius: 12px;
+  }
+
+  .userProfile {
+    width: 40px;
+    height: 40px;
+  }
+
+  .createPostContainer > textarea {
+    height: 58%;
+    padding: 0.5rem 0.7rem;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+
+  .Fab > svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .uploadButton {
+    right: 5px;
+    bottom: -22px;
+    padding: 7px 10px;
+    font-size: 11px;
+    border-radius: 7px;
+  }
+
+
+  /* =========================
+     POST
+     ========================= */
+
+  .singleCard_profileContainer {
+    padding: 0.7rem;
+    gap: 0.6rem;
+  }
+
+  .singleCard_profileContainer > img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .card_body {
+    margin-inline: 0.6rem;
+    font-size: 13px;
+  }
+
+  .singleCard_image > img {
+    border-radius: 10px;
+    max-height: 400px;
+  }
+
+
+  /* =========================
+     OPTIONS
+     ========================= */
+
+  .optionContainer {
+    padding-inline: 0.2rem;
+    margin-block: 0.5rem;
+  }
+
+  .optionContainer svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .singleOption_container {
+    gap: 0.2rem;
+    font-size: 13px;
+  }
+
+
+  /* =========================
+     COMMENTS MODAL
+     ========================= */
+
+  .commentsContainer {
+    padding: 0.5rem;
+  }
+
+  .allCommentsContainer {
+    width: 90svw;
+    height: 85vh;
+    padding: 0.8rem;
+    border-radius: 10px;
+  }
+
+  .commentsList {
+    margin-bottom: 80px;
+  }
+
+
+  /* =========================
+     COMMENT INPUT
+     ========================= */
+
+  .postCommentContainer {
+    left: 2%;
+    width: 96%;
+    gap: 0.4rem;
+    bottom: 0.6rem;
+  }
+
+  .postCommentContainer > input {
+    padding-inline: 0.7rem;
+    padding-block: 0.8rem;
+    font-size: 12px;
+  }
+
+  .postCommentContainer_commentBtn {
+    padding: 0.8rem;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+
+  .singleComment_profilePicture {
+    font-size: 13px;
+  }
+
+  .commentBody {
+    margin-inline: 0.5rem;
+    font-size: 13px;
+  }
+}
+

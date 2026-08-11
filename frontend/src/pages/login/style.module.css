@@ -1,0 +1,278 @@
+.page {
+  min-height: 100vh;
+  width: 100%;
+  background: url("/images/chat_img.webp") center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  font-family: Inter, sans-serif;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(3px);
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 87.5rem;
+  min-height: 43.75rem  ;
+  height: 890px;
+
+  display: grid;
+  grid-template-columns: 60% 40%;
+
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+
+  border-radius: 30px;
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.25),
+    0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.left {
+  background: 
+    url("/images/main_picture.png");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px;
+  color: white;position: relative; 
+   position: relative;
+  flex: 0 0 60%; /* Fix the width so it doesn't shrink */
+  min-height: 890px; /* Force the height to stay consistent */
+
+}
+
+.logo {
+  /* Position it absolutely to the top right */
+  position: absolute;
+  top: 0%;    /* Matches the padding of the left box */
+  right: 150px;  /* Matches the padding of the left box */
+  
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+}
+
+/* Ensure the image fills the container correctly */
+.logo img {
+  width: 20rem;
+  height: 20rem;
+  display: block;
+  
+}
+
+.content {
+  max-width: 450px;
+}
+
+.content h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.content p {
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.learnBtn {
+  margin-top: 20px;
+  padding: 14px 28px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.learnBtn:hover {
+  background: white;
+  color: #5f35f5;
+}
+
+.dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+}
+
+.right {
+  background: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Adds a scrollbar if the content gets too long */
+  max-height: 890px;
+}
+
+.backBtn {
+  width: fit-content;
+  padding: 10px 18px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  margin-top: 35px;
+  border-bottom: 1px solid #ececec;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 18px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  border-bottom: 3px solid transparent;
+}
+
+.activeTab {
+  color: #5f35f5 !important;
+  border-bottom: 2.5px solid #5f35f5 !important;
+}
+
+.description {
+  margin-bottom: 25px ;
+  color: #666;
+  line-height: 1.8;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form input {
+  height: 58px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 0 18px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form input:focus {
+  border-color: #5f35f5;
+  box-shadow: 0 0 0 4px rgba(95, 53, 245, 0.12);
+}
+
+.passwordWrapper {
+  position: relative;
+}
+
+.forgot {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #5f35f5;
+  cursor: pointer;
+}
+
+.loginBtn {
+  height: 58px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #5f35f5, #7c3aed);
+  transition: 0.3s;
+}
+
+.loginBtn:hover {
+  transform: translateY(-2px);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 25px 0;
+  color: #888;
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+.githubBtn {
+  height: 58px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  margin-top: auto;
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+}
+
+.state{
+  
+  width: fit-content;
+  max-width: 80%;
+  margin: 1rem auto;
+  padding: 0.75rem 1rem;
+
+  border-radius: 8px;
+  text-align: center;
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .left {
+    min-height: 280px;
+    padding: 30px;
+  }
+
+  .right {
+    padding: 30px;
+  }
+
+  .content h1 {
+    font-size: 32px;
+  }
+}
